@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails app using Metronic Theme.
 
-Things you may want to cover:
+# Versions
 
-* Ruby version
+- ruby 3.2.2
+- rail 7.1.2
+- Metronic Theme 8.2.2
 
-* System dependencies
+# Dependencies
 
-* Configuration
+Metronic theme files in vendor/metronic
 
-* Database creation
+# Database creation
 
-* Database initialization
+None used for this demo
 
-* How to run the test suite
+# Configuration
 
-* Services (job queues, cache servers, search engines, etc.)
+Gulp Configuration: vendor/metronic/tools/gulp.config.js
+Default Gulp Configuration: vendor/metronic/tools/gulp-original.config.js
 
-* Deployment instructions
-
-* ...
+# Instructions
