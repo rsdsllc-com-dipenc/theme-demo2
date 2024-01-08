@@ -57,17 +57,35 @@ const gulpConfig = {
             },
           },
           optional: {
-            // Automatically adjust textarea height based on user input
-            autosize: {
-              scripts: ["{$config.path.node_modules}/autosize/dist/autosize.js"],
+            axios: {
+              scripts: ["{$config.path.node_modules}/axios/dist/axios.min.js"],
             },
-
-            // Limit the number of characters in a text input or textarea
-            bootstrapmaxlength: {
-              scripts: ["{$config.path.node_modules}/bootstrap-maxlength/src/bootstrap-maxlength.js"],
+            lozad: {
+              scripts: ["{$config.path.node_modules}/lozad/dist/lozad.min.js"],
             },
-
-            // Comprehensive form validation library with Bootstrap 5 support
+            select2: {
+              styles: ["{$config.path.node_modules}/select2/dist/css/select2.css"],
+              scripts: [
+                "{$config.path.node_modules}/select2/dist/js/select2.full.js",
+                "{$config.path.common_src}/js/vendors/plugins/select2.init.js",
+              ],
+            },
+            "tempus-dominus": {
+              styles: ["{$config.path.node_modules}/@eonasdan/tempus-dominus/dist/css/tempus-dominus.min.css"],
+              scripts: [
+                "{$config.path.node_modules}/@eonasdan/tempus-dominus/dist/js/tempus-dominus.min.js",
+                "{$config.path.common_src}/js/vendors/plugins/tempus-dominus.init.js",
+                "{$config.path.node_modules}/@eonasdan/tempus-dominus/dist/locales/de.js",
+                "{$config.path.node_modules}/@eonasdan/tempus-dominus/dist/plugins/customDateFormat.js",
+              ],
+            },
+            flatpickr: {
+              styles: ["{$config.path.node_modules}/flatpickr/dist/flatpickr.css"],
+              scripts: [
+                "{$config.path.node_modules}/flatpickr/dist/flatpickr.js",
+                "{$config.path.node_modules}/flatpickr/dist/l10n/ar.js",
+              ],
+            },
             formvalidation: {
               styles: ["{$config.path.common_src}/plugins/@form-validation/umd/styles/index.css"],
               scripts: [
@@ -77,59 +95,104 @@ const gulpConfig = {
                 "{$config.path.common_src}/plugins/@form-validation/umd/plugin-bootstrap5/index.min.js",
               ],
             },
-
-            // Input mask for enforcing a specific format in text inputs
+            bootstrapmaxlength: {
+              scripts: ["{$config.path.node_modules}/bootstrap-maxlength/src/bootstrap-maxlength.js"],
+            },
+            daterangepicker: {
+              styles: ["{$config.path.node_modules}/bootstrap-daterangepicker/daterangepicker.css"],
+              scripts: ["{$config.path.node_modules}/bootstrap-daterangepicker/daterangepicker.js"],
+            },
             inputmask: {
               scripts: [
                 "{$config.path.node_modules}/inputmask/dist/inputmask.js",
                 "{$config.path.node_modules}/inputmask/dist/bindings/inputmask.binding.js",
               ],
             },
-
-            // Customizable SVG icon library with multiple styles
+            tinyslider: {
+              styles: ["{$config.path.node_modules}/tiny-slider/dist/tiny-slider.css"],
+              scripts: ["{$config.path.node_modules}/tiny-slider/dist/min/tiny-slider.js"],
+            },
+            nouislider: {
+              styles: ["{$config.path.node_modules}/nouislider/dist/nouislider.css"],
+              scripts: ["{$config.path.node_modules}/nouislider/dist/nouislider.js"],
+            },
+            autosize: {
+              scripts: ["{$config.path.node_modules}/autosize/dist/autosize.js"],
+            },
+            clipboard: {
+              scripts: ["{$config.path.node_modules}/clipboard/dist/clipboard.min.js"],
+            },
+            bootstrapmultiselectsplitter: {
+              scripts: ["{$config.path.node_modules}/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.js"],
+            },
+            smoothscroll: {
+              scripts: ["{$config.path.node_modules}/smooth-scroll/dist/smooth-scroll.js"],
+            },
+            dropzone: {
+              styles: ["{$config.path.node_modules}/dropzone/dist/dropzone.css"],
+              scripts: [
+                "{$config.path.node_modules}/dropzone/dist/dropzone.js",
+                "{$config.path.common_src}/js/vendors/plugins/dropzone.init.js",
+              ],
+            },
+            quil: {
+              styles: ["{$config.path.node_modules}/quill/dist/quill.snow.css"],
+              scripts: ["{$config.path.node_modules}/quill/dist/quill.js"],
+            },
+            tagify: {
+              styles: ["{$config.path.node_modules}/@yaireo/tagify/dist/tagify.css"],
+              scripts: [
+                "{$config.path.node_modules}/@yaireo/tagify/dist/tagify.polyfills.min.js",
+                "{$config.path.node_modules}/@yaireo/tagify/dist/tagify.min.js",
+              ],
+            },
+            toastr: {
+              styles: ["{$config.path.common_src}/plugins/toastr/build/toastr.css"],
+              scripts: ["{$config.path.common_src}/plugins/toastr/build/toastr.min.js"],
+            },
+            apexcharts: {
+              styles: ["{$config.path.node_modules}/apexcharts/dist/apexcharts.css"],
+              scripts: ["{$config.path.node_modules}/apexcharts/dist/apexcharts.min.js"],
+            },
+            chartjs: {
+              scripts: ["{$config.path.node_modules}/chart.js/dist/chart.umd.js"],
+            },
+            countupjs: {
+              scripts: ["{$config.path.node_modules}/countup.js/dist/countUp.umd.js"],
+            },
+            sweetalert2: {
+              styles: ["{$config.path.node_modules}/sweetalert2/dist/sweetalert2.css"],
+              scripts: [
+                "{$config.path.node_modules}/es6-promise-polyfill/promise.min.js",
+                "{$config.path.node_modules}/sweetalert2/dist/sweetalert2.min.js",
+                "{$config.path.common_src}/js/vendors/plugins/sweetalert2.init.js",
+              ],
+            },
             keenicons: {
               styles: [
                 "{$config.path.common_src}/plugins/keenicons/duotone/style.css",
-                // "{$config.path.common_src}/plugins/keenicons/outline/style.css",
-                // "{$config.path.common_src}/plugins/keenicons/solid/style.css",
+                "{$config.path.common_src}/plugins/keenicons/outline/style.css",
+                "{$config.path.common_src}/plugins/keenicons/solid/style.css",
               ],
               fonts: [
                 "{$config.path.common_src}/plugins/keenicons/duotone/fonts/**",
-                // "{$config.path.common_src}/plugins/keenicons/outline/fonts/**",
-                // "{$config.path.common_src}/plugins/keenicons/solid/fonts/**",
+                "{$config.path.common_src}/plugins/keenicons/outline/fonts/**",
+                "{$config.path.common_src}/plugins/keenicons/solid/fonts/**",
               ],
             },
-
-            // Icon library with a variety of icons for use in Bootstrap projects
+            "line-awesome": {
+              styles: ["{$config.path.node_modules}/line-awesome/dist/line-awesome/css/line-awesome.css"],
+              fonts: ["{$config.path.node_modules}/line-awesome/dist/line-awesome/fonts/**"],
+            },
             "bootstrap-icons": {
               styles: ["{$config.path.node_modules}/bootstrap-icons/font/bootstrap-icons.css"],
               fonts: ["{$config.path.node_modules}/bootstrap-icons/font/fonts/**"],
             },
-
-            /*
-            Plugins Removed:
-            - axios: HTTP client for making requests
-            - clipboard: Modern copy to clipboard library
-            - countupjs: JavaScript library for smoothly transitioning numbers
-            - daterangepicker: Date range picker
-            - dropzone: Open source library that provides drag'n'drop file uploads
-            - flatpickr: Lightweight and powerful datetime picker
-            - line-awesome: Modern, fast, and compatible icon set
-            - lozad: Lazy loading library for images
-            - nouislider: JavaScript range slider without dependencies
-            - quil: Modern WYSIWYG editor
-            - select2: jQuery-based replacement for select boxes
-            - smoothscroll: Smooth scrolling library
-            - sweetalert2: Customizable sweet alert library
-            - tagify: Tags input component
-            - tempus-dominus: Date and time picker
-            - tinyslider: Vanilla JavaScript slider for all purposes
-            - toastr: Simple JavaScript toast notifications
-
-            Also remove the above from vendor/metronic/src/sass/vendors/plugins/_plugins.scss
-            */
+            "@fortawesome": {
+              styles: ["{$config.path.node_modules}/@fortawesome/fontawesome-free/css/all.min.css"],
+              fonts: ["{$config.path.node_modules}/@fortawesome/fontawesome-free/webfonts/**"],
+            },
           },
-
           override: {
             styles: ["{$config.path.src}/sass/plugins.scss"],
           },
@@ -416,8 +479,7 @@ const gulpConfig = {
     },
     widgets: {
       src: {
-        // scripts: ["{$config.path.common_src}/js/widgets/**/*.js"],
-        scripts: ["{$config.path.common_src}/js/blank.js"],
+        scripts: ["{$config.path.common_src}/js/widgets/**/*.js"],
       },
       dist: {
         scripts: "{$config.dist}/js/widgets.bundle.js",
@@ -453,8 +515,3 @@ const gulpConfig = {
 };
 
 export { gulpConfig };
-
-// Stats
-// All enabled:
-// CSS: style.bundle.css: 51105
-// JS: scripts.bundle.js: 8279, widgets.bundle.js: 19785

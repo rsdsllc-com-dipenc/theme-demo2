@@ -6,11 +6,53 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <script>
+      // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking)
+      if (window.top != window.self) {
+          window.top.location.replace(window.self.location.href);
+      }
+    </script>
   </head>
 
-  <body>
+  <body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+    <script>
+      var defaultThemeMode = "light";
+      var themeMode;
+      if (document.documentElement) {
+        if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+          themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
+        } else {
+          if (localStorage.getItem("data-bs-theme") !== null) {
+      themeMode = localStorage.getItem("data-bs-theme");
+          } else {
+      themeMode = defaultThemeMode;
+          }
+        }
+
+        if (themeMode === "system") {
+          themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+        }
+        document.documentElement.setAttribute("data-bs-theme", themeMode);
+      }
+
+
+      const body = document.body;
+      body.id = "kt_app_body";
+      body.classList.add("app-default");
+    </script>
+
     <%= yield %>
+
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
   </body>
 </html>
