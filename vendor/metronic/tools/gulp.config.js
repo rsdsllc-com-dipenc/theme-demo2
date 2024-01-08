@@ -68,23 +68,23 @@ const gulpConfig = {
             },
 
             // Comprehensive form validation library with Bootstrap 5 support
-            formvalidation: {
-              styles: ["{$config.path.common_src}/plugins/@form-validation/umd/styles/index.css"],
-              scripts: [
-                "{$config.path.node_modules}/es6-shim/es6-shim.js",
-                "{$config.path.common_src}/plugins/@form-validation/umd/bundle/popular.min.js",
-                "{$config.path.common_src}/plugins/@form-validation/umd/bundle/full.min.js",
-                "{$config.path.common_src}/plugins/@form-validation/umd/plugin-bootstrap5/index.min.js",
-              ],
-            },
+            // formvalidation: {
+            //   styles: ["{$config.path.common_src}/plugins/@form-validation/umd/styles/index.css"],
+            //   scripts: [
+            //     "{$config.path.node_modules}/es6-shim/es6-shim.js",
+            //     "{$config.path.common_src}/plugins/@form-validation/umd/bundle/popular.min.js",
+            //     "{$config.path.common_src}/plugins/@form-validation/umd/bundle/full.min.js",
+            //     "{$config.path.common_src}/plugins/@form-validation/umd/plugin-bootstrap5/index.min.js",
+            //   ],
+            // },
 
             // Input mask for enforcing a specific format in text inputs
-            inputmask: {
-              scripts: [
-                "{$config.path.node_modules}/inputmask/dist/inputmask.js",
-                "{$config.path.node_modules}/inputmask/dist/bindings/inputmask.binding.js",
-              ],
-            },
+            // inputmask: {
+            //   scripts: [
+            //     "{$config.path.node_modules}/inputmask/dist/inputmask.js",
+            //     "{$config.path.node_modules}/inputmask/dist/bindings/inputmask.binding.js",
+            //   ],
+            // },
 
             // Customizable SVG icon library with multiple styles
             keenicons: {
@@ -416,8 +416,8 @@ const gulpConfig = {
     },
     widgets: {
       src: {
-        // scripts: ["{$config.path.common_src}/js/widgets/**/*.js"],
-        scripts: ["{$config.path.common_src}/js/blank.js"],
+        scripts: ["{$config.path.common_src}/js/widgets/**/*.js"],
+        // scripts: ["{$config.path.common_src}/js/blank.js"],
       },
       dist: {
         scripts: "{$config.dist}/js/widgets.bundle.js",
