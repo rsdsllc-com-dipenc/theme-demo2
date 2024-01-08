@@ -7,8 +7,8 @@
     <%= csp_meta_tag %>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag 'plugins/global/plugins.bundle.css' %>
+    <%= stylesheet_link_tag 'css/style.bundle.css' %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
@@ -49,6 +49,10 @@
       body.id = "kt_app_body";
       body.classList.add("app-default");
     </script>
+
+    <!--begin::03_main-->
+    <%= render 'layouts/page/03_main' %>
+    <!--end::03_main-->
 
     <%= yield %>
 
